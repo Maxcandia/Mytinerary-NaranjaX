@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json({ extended: true }))
 app.use(cors());
 app.use('/cities', require('./routes/cities'));
+app.use('/itineraries', require('./routes/itineraries'));
 mongoose.connect(db, {useNewUrlParser: true, 
           useCreateIndex:true,
           useUnifiedTopology: true})
