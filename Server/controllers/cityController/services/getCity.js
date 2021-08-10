@@ -13,7 +13,7 @@ const getCity = async (req, res) => {
         }
         return res.status(200).json({
             ok: true,
-            city: data
+            response: data
         })
     } catch(error){
         res.status(500).json({

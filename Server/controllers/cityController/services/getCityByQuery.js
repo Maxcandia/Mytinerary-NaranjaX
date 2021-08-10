@@ -13,7 +13,7 @@ const getCityByQuery = async (req, res) => {
         }
         return res.status(200).json({
               ok: true,
-              cities:data
+              response:data
         })
 
 

@@ -8,7 +8,7 @@ router.get ('/test', (req, res) => {
     res.send ({msg: 'Ruta de prueba de ciudades.'})
 })
 
-router.get ('/all', cityController.getCities );
+router.get ('/cities', cityController.getCities );
 router.get('/city', cityController.getCityByQuery);  
 router.get ('/:id', cityController.getCity);
 router.post('/', cityController.createCity);    

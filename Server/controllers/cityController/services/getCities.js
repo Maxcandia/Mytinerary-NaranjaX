@@ -7,7 +7,7 @@ const getCities = async (req, res) => {
         const count = await cityRepository.count()
         res.status(200).json({
             ok: true,
-            cities: data,
+            response: data,
             total: count
         })  
     } catch(error) {
