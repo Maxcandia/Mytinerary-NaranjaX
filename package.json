@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"concurrently \"cd Server && nodemon server.js \"\" cd Client && npm start\" "
+    "test": "jest --runInBand",
+    "start": "concurrently \"nodemon server.js \" \" cd ../client && npm start\""
   },
   "author": "Maximiliano Candia",
   "license": "ISC",
@@ -14,5 +14,12 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.13.5"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "supertest": "^6.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
