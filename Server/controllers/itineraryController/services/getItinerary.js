@@ -1,9 +1,9 @@
-const cityRepository = require('../../../repositories/cityRepository');
+const itineraryRepository = require('../../../repositories/itineraryRepository');
 
 const getItineraryByCity = async (req, res) => {
     try {
       const cityId = req.query.cityId;
-      const data = await cityRepository.getItineraryByCity(cityId);
+      const data = await itineraryRepository.getItineraryByCity(cityId);
   
       if (!data) {
         return res.status(401).json({

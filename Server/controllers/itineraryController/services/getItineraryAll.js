@@ -1,9 +1,9 @@
-const cityRepository = require('../../../repositories/cityRepository');
+const itineraryRepository = require('../../../repositories/itineraryRepository');
 
 const getItineraryAll = async (req, res) => {
     try {
-        const data = await cityRepository.getItineraryAll()
-        const count = await cityRepository.count()
+        const data = await itineraryRepository.getItineraryAll()
+        const count = await itineraryRepository.count()
         res.status(200).json({
             ok: true,
             itinerary: data,
