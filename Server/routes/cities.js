@@ -9,7 +9,7 @@ router.get ('/test', passport.authenticate('jwt',{session: false}), (req, res) =
     res.send ({msg: 'test para jwt'})
 })
 
-router.get ('/cities', cityController.getCities );
+router.get ('/', cityController.getCities );
 router.get('/city', cityController.getCityByQuery);  
 router.get ('/:id', cityController.getCity);
 router.post('/', cityController.createCity);    

@@ -19,7 +19,7 @@ const Itinerary = (props) => {
         if (userLogged) {
             const response = await checkUser(_id, userLogged)
             setUserComments(response.arrayOwnerCheck)
-            setLikeItinerary({ ...likeItinerary, liked: response.likedChek })
+            setLikeItinerary({ ...likeItinerary, liked: response.likedCheck })
         }
     }
 

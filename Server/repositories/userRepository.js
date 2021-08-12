@@ -14,9 +14,9 @@ const createUser = async (user) => {
     return newUser.save();
 }  
 
-const getUsersByEmail = async mail  => User.find({mail});
+const getUserByEmail = async mail => User.findOne({ mail });
 
 module.exports= {
     createUser,
-    getUsersByEmail
+    getUserByEmail
 }

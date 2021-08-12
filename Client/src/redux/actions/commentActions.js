@@ -13,7 +13,7 @@ const commentActions = {
                 const response = await axios.post(API + '/comments/' + itineraryId, text,
                     { headers: { 'Authorization': 'Bearer ' + userToken } })
                 if (response.status === 200) {
-                    return response.data
+                    return response.data.response
                 }
             } catch (error) {
                 toast.error('Internal database error, try in a moment please', {position: toast.POSITION.TOP_RIGHT})
