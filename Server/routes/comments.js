@@ -9,4 +9,11 @@ router.post('/:id', passport.authenticate('jwt', { session: false }), validator.
     text: joi.string().required(),
 })), itineraryController.addComment);
 
+router.put('/:id', passport.authenticate('jwt', { session: false }), validator.body(joi.object({
+    text: joi.string().required(),
+})), itineraryController.editComment);
+
+router.delete('/:id', passport.authenticate('jwt', { session: false }), itineraryController.deleteComment);
+
+
 module.exports = router;

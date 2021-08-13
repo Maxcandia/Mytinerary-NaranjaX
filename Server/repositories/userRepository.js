@@ -11,7 +11,8 @@ const createUser = async (user) => {
         userPic: user.userPic,
         country: user.country
     })
-    return newUser.save();
+    await newUser.save();
+    return newUser;
 }  
 
 const getUserByEmail = async mail => User.findOne({ mail });

@@ -24,7 +24,7 @@ const commentActions = {
     deleteComment: (userToken, commentId) => {
         return async (dispatch, getState) => {
             try {
-                const response = await axios.delete(API + '/comment/' + commentId,
+                const response = await axios.delete(API + '/comments/' + commentId,
                     { headers: { 'Authorization': 'Bearer ' + userToken } })
                 if (response.status === 200) {
                     return response.data.response
@@ -38,7 +38,7 @@ const commentActions = {
     editComment: (userToken, commentId, text) => {
         return async (dispatch, getState) => {
             try {
-                const response = await axios.put(API + '/comment/' + commentId, text,
+                const response = await axios.put(API + '/comments/' + commentId, text,
                     { headers: { 'Authorization': 'Bearer ' + userToken } })
                 if (response.status === 200) {
                     return response.data.response
