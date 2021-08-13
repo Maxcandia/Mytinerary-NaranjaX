@@ -3,12 +3,13 @@ const express = require ('express');
 const router = express.Router();
 const cityModel = require('../models/cityModel');
 const cityController = require('../controllers/cityController/cityController');
-router.get ('/test', (req, res) => {
+const passport = require('passport');
+router.get ('/test', passport.authenticate('jwt',{session: false}), (req, res) => {
     
-    res.send ({msg: 'Ruta de prueba de ciudades.'})
+    res.send ({msg: 'test para jwt'})
 })
 
-router.get ('/cities', cityController.getCities );
+router.get ('/', cityController.getCities );
 router.get('/city', cityController.getCityByQuery);  
 router.get ('/:id', cityController.getCity);
 router.post('/', cityController.createCity);    
